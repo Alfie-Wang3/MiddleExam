@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="更多資訊">
     <title>王婷宣|更多資訊</title>
     <style>
         body{
@@ -29,6 +29,54 @@
         h3{
             text-align: center;
         }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        .card{
+            box-sizing: border-box;
+            margin: 0px auto;
+
+            background-color: white;
+            background-size: cover;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .gridsite{
+            width: 70%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 auto;
+        }
+
+        .back-btn {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .back-btn a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #2D3142;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn a:hover {
+            background-color: #3f4a69;
+        }
+
+        .back-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
     </style>
 </head>
 <body>
@@ -53,21 +101,35 @@
 
         <section>
             <h3>社團/活動經歷</h3>
-            <p><b>&nbsp;大學</b></p>
-                <p>&nbsp;&nbsp;114-1資管系 四系聯合系烤 工作人員</p>
-                <p>&nbsp;&nbsp;113-2羅浮社 中原國小交管</p>
-                <p>&nbsp;&nbsp;113-1羅浮社 寒冬送暖</p>
-                <p>&nbsp;&nbsp;113-1羅浮社 中原國小交管</p>
-            <p><b>&nbsp;高中</b></p>
-                <p>&nbsp;&nbsp;112-2新莊高中 春季舞會 主持人</p>
-                <p>&nbsp;&nbsp;111-2新莊高中 班聯會 副主席</p>
-                <p>&nbsp;&nbsp;111-1新莊高中 班聯會 副主席</p>
-                <p>&nbsp;&nbsp;110-1非常音樂社 非你莫屬 開場舞表演</p>
+            <div class="gridsite">
+                <p><b>&nbsp;大學</b></p>
+                    <p></p>
+                    <p class="card">&nbsp;&nbsp;114-1資管系 四系聯合系烤 工作人員</p>
+                    <p class="card">&nbsp;&nbsp;113-2羅浮社 中原國小交管</p>
+                    <p class="card">&nbsp;&nbsp;113-1羅浮社 寒冬送暖</p>
+                    <p class="card">&nbsp;&nbsp;113-1羅浮社 中原國小交管</p>
+            </div>
+            <div class="gridsite">
+                <p><b>&nbsp;高中</b></p>
+                    <p></p>
+                    <p class="card">&nbsp;&nbsp;112-2新莊高中 春季舞會 主持人</p>
+                    <p class="card">&nbsp;&nbsp;111-2新莊高中 班聯會 副主席</p>
+                    <p class="card">&nbsp;&nbsp;111-1新莊高中 班聯會 副主席</p>
+                    <p class="card">&nbsp;&nbsp;110-1非常音樂社 非你莫屬 開場舞表演</p>
+            </div>
         </section>
     
+        <section>
+            <h3>工作經歷</h3>
+                <p>&nbsp;&nbsp;110/04~111/11 新莊宏匯一風堂-pt</p>
+                <p>&nbsp;&nbsp;112/06~112/09 新莊宏匯一風堂-pt</p>
+        </section>
     </article>
     
-
-    <a href="index.html"><h2>回上一頁</h2></a>
+    <div class="back-btn">
+        <a href="index.html">
+            <img src="img/icon1.png" alt="back"> 回上一頁
+        </a>
+    </div>
 </body>
 </html>

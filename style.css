@@ -39,7 +39,7 @@ aside{
     flex: 1;
     text-align: center;
     position: relative;
-    margin-top: -100px; /*蓋住 header*/
+    margin-top: -100px; 
     padding: 20px;
     border-radius: 15px;
     z-index: 2;
@@ -66,13 +66,25 @@ section {
     background-color: #D8D5DB;
     padding: 20px;
     border-radius: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease forwards;
 }
+
+/*section浮出特效*/
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
 
 /* slogan */
 .slogan {
     font-style: italic;
     text-align: center;
     margin-top: 10px;
+}
+.slogan:hover{
+    background-color: #2D3142;
+    color: white;
 }
 
 /*skill*/
@@ -91,6 +103,92 @@ section {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/*skill 動畫*/
+.pro-python{
+    border-right-style: solid;
+    border-right-color:#2D3142 ;
+    animation: bar1 2s ease-out ;
+    border-right-width: 100px;
+}
+
+@keyframes bar1{
+    from{
+        border-right-width: 0px;
+    }
+    to{
+        border-right-width: 100px;
+    }
+}
+
+.pro-python::after{
+    content: "85%";
+    display: inline;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 50px;
+}
+
+.pro-java{
+    border-right-style: solid;
+    border-right-color:#2D3142 ;
+    animation: bar2 2s ease-out ;
+    border-right-width: 120px;
+}
+
+@keyframes bar2{
+    from{
+        border-right-width: 0px;
+    }
+    to{
+        border-right-width: 120px;
+    }
+}
+
+.pro-java::after{
+    content: "90%";
+    display: inline;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 80px;
+}
+
+.pro-html{
+    border-right-style: solid;
+    border-right-color:#2D3142 ;
+    animation: bar3 2s ease-out ;
+    border-right-width: 80px;
+}
+
+@keyframes bar3{
+    from{
+        border-right-width: 0px;
+    }
+    to{
+        border-right-width: 80px;
+    }
+}
+
+.pro-html::after{
+    content: "70%";
+    display: inline;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 40px;
+}
+
+.pro-python, .pro-java, .pro-html {
+    display: inline-block;
+    height: 18px;
+    background-color: #2D3142;
+    border-radius: 8px;
 }
 
 /*exp*/
@@ -123,6 +221,12 @@ section {
     height: 110px;
     border-radius: 10px;
     object-fit: cover;
+    transition: width 1s ease-out, height 1s ease-out;
+}
+
+.exp-item img:hover{
+    width: 300px;
+    height: 300px;
 }
 
 .exp-item h4 {
@@ -134,6 +238,41 @@ section {
     line-height: 1.6;
     text-align: justify;
 }
+
+.exp-btns {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+/* 不同按鈕顏色 */
+.btn.download {
+    background-color: #2D3142;
+    color: #fff;
+}
+
+.btn.download:hover {
+    background-color: #3f4a69;
+}
+
+.btn.video {
+    background-color: #B0D7FF;
+    color: #222;
+}
+
+.btn.video:hover {
+    background-color: #91c2f5;
+    transform: scale(1.05);
+}
+
 /* footer */
 footer {
     background-color: #2D3142;
